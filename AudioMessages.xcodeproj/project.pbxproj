@@ -1,0 +1,569 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A52004261E6EBAFB00EC944A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52004251E6EBAFB00EC944A /* AVFoundation.framework */; };
+		A5C418581E66F8F000D8941A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5C418571E66F8F000D8941A /* Assets.xcassets */; };
+		A5C4185F1E66F8F000D8941A /* MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A5C4185E1E66F8F000D8941A /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A5C418641E66F8F000D8941A /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C418631E66F8F000D8941A /* Messages.framework */; };
+		A5C418671E66F8F000D8941A /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C418661E66F8F000D8941A /* MessagesViewController.swift */; };
+		A5C4186A1E66F8F000D8941A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C418681E66F8F000D8941A /* MainInterface.storyboard */; };
+		A5C4186C1E66F8F000D8941A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5C4186B1E66F8F000D8941A /* Assets.xcassets */; };
+		A5C418791E671FAC00D8941A /* wrong.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A5C418781E671FAC00D8941A /* wrong.m4a */; };
+		A5C4187A1E671FAC00D8941A /* wrong.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A5C418781E671FAC00D8941A /* wrong.m4a */; };
+		A5C4187C1E6739F500D8941A /* Best_of_5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A5C4187B1E6739F500D8941A /* Best_of_5.mp4 */; };
+		A5C4187D1E6739F500D8941A /* Best_of_5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A5C4187B1E6739F500D8941A /* Best_of_5.mp4 */; };
+		B1E75CF7BC2BCE254F05B0F7 /* Pods_MessagesExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECBC963786E11E4104F3968A /* Pods_MessagesExtension.framework */; };
+		FA464DFEEAA2A1866A9D3936 /* Pods_AudioMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FF1104F7CEFAD9807ADF86E /* Pods_AudioMessages.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A5C418601E66F8F000D8941A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5C4184E1E66F8F000D8941A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5C4185D1E66F8F000D8941A;
+			remoteInfo = MessagesExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A5C418731E66F8F000D8941A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A5C4185F1E66F8F000D8941A /* MessagesExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		010C5CCA2F79FAB43951C150 /* Pods-AudioMessages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioMessages.release.xcconfig"; path = "Pods/Target Support Files/Pods-AudioMessages/Pods-AudioMessages.release.xcconfig"; sourceTree = "<group>"; };
+		3FF1104F7CEFAD9807ADF86E /* Pods_AudioMessages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AudioMessages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		554862045602BC66522F7165 /* Pods-MessagesExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessagesExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MessagesExtension/Pods-MessagesExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		61DA9B558E7A49D87110E7C6 /* Pods-MessagesExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessagesExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MessagesExtension/Pods-MessagesExtension.release.xcconfig"; sourceTree = "<group>"; };
+		98CD425DB4541327CD9C915C /* Pods-AudioMessages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioMessages.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AudioMessages/Pods-AudioMessages.debug.xcconfig"; sourceTree = "<group>"; };
+		A52004251E6EBAFB00EC944A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A5C418541E66F8F000D8941A /* AudioMessages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioMessages.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5C418571E66F8F000D8941A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A5C418591E66F8F000D8941A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5C4185E1E66F8F000D8941A /* MessagesExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MessagesExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5C418631E66F8F000D8941A /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		A5C418661E66F8F000D8941A /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		A5C418691E66F8F000D8941A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		A5C4186B1E66F8F000D8941A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A5C4186D1E66F8F000D8941A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5C418781E671FAC00D8941A /* wrong.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = wrong.m4a; sourceTree = "<group>"; };
+		A5C4187B1E6739F500D8941A /* Best_of_5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Best_of_5.mp4; sourceTree = "<group>"; };
+		ECBC963786E11E4104F3968A /* Pods_MessagesExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessagesExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0575F17BE520F1D75F49D408 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA464DFEEAA2A1866A9D3936 /* Pods_AudioMessages.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5C4185B1E66F8F000D8941A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A52004261E6EBAFB00EC944A /* AVFoundation.framework in Frameworks */,
+				A5C418641E66F8F000D8941A /* Messages.framework in Frameworks */,
+				B1E75CF7BC2BCE254F05B0F7 /* Pods_MessagesExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37B32532384F91CED6033D18 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				98CD425DB4541327CD9C915C /* Pods-AudioMessages.debug.xcconfig */,
+				010C5CCA2F79FAB43951C150 /* Pods-AudioMessages.release.xcconfig */,
+				554862045602BC66522F7165 /* Pods-MessagesExtension.debug.xcconfig */,
+				61DA9B558E7A49D87110E7C6 /* Pods-MessagesExtension.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A5C4184D1E66F8F000D8941A = {
+			isa = PBXGroup;
+			children = (
+				A5C418561E66F8F000D8941A /* AudioMessages */,
+				A5C418651E66F8F000D8941A /* MessagesExtension */,
+				A5C418621E66F8F000D8941A /* Frameworks */,
+				A5C418551E66F8F000D8941A /* Products */,
+				37B32532384F91CED6033D18 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		A5C418551E66F8F000D8941A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5C418541E66F8F000D8941A /* AudioMessages.app */,
+				A5C4185E1E66F8F000D8941A /* MessagesExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5C418561E66F8F000D8941A /* AudioMessages */ = {
+			isa = PBXGroup;
+			children = (
+				A5C418571E66F8F000D8941A /* Assets.xcassets */,
+				A5C418591E66F8F000D8941A /* Info.plist */,
+			);
+			path = AudioMessages;
+			sourceTree = "<group>";
+		};
+		A5C418621E66F8F000D8941A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A52004251E6EBAFB00EC944A /* AVFoundation.framework */,
+				A5C418631E66F8F000D8941A /* Messages.framework */,
+				3FF1104F7CEFAD9807ADF86E /* Pods_AudioMessages.framework */,
+				ECBC963786E11E4104F3968A /* Pods_MessagesExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5C418651E66F8F000D8941A /* MessagesExtension */ = {
+			isa = PBXGroup;
+			children = (
+				A5C418771E671FAC00D8941A /* res */,
+				A5C418661E66F8F000D8941A /* MessagesViewController.swift */,
+				A5C418681E66F8F000D8941A /* MainInterface.storyboard */,
+				A5C4186B1E66F8F000D8941A /* Assets.xcassets */,
+				A5C4186D1E66F8F000D8941A /* Info.plist */,
+			);
+			path = MessagesExtension;
+			sourceTree = "<group>";
+		};
+		A5C418771E671FAC00D8941A /* res */ = {
+			isa = PBXGroup;
+			children = (
+				A5C4187B1E6739F500D8941A /* Best_of_5.mp4 */,
+				A5C418781E671FAC00D8941A /* wrong.m4a */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5C418531E66F8F000D8941A /* AudioMessages */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5C418741E66F8F000D8941A /* Build configuration list for PBXNativeTarget "AudioMessages" */;
+			buildPhases = (
+				26E04D9AE7A03C4986CD7DFD /* [CP] Check Pods Manifest.lock */,
+				A5C418521E66F8F000D8941A /* Resources */,
+				A5C418731E66F8F000D8941A /* Embed App Extensions */,
+				0575F17BE520F1D75F49D408 /* Frameworks */,
+				664682C927F28A82CD6AA1AD /* [CP] Embed Pods Frameworks */,
+				9FE8E02B9646E3D29B4FD326 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5C418611E66F8F000D8941A /* PBXTargetDependency */,
+			);
+			name = AudioMessages;
+			productName = AudioMessages;
+			productReference = A5C418541E66F8F000D8941A /* AudioMessages.app */;
+			productType = "com.apple.product-type.application.messages";
+		};
+		A5C4185D1E66F8F000D8941A /* MessagesExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5C418701E66F8F000D8941A /* Build configuration list for PBXNativeTarget "MessagesExtension" */;
+			buildPhases = (
+				92713CD5381B330984DE9ACF /* [CP] Check Pods Manifest.lock */,
+				A5C4185A1E66F8F000D8941A /* Sources */,
+				A5C4185B1E66F8F000D8941A /* Frameworks */,
+				A5C4185C1E66F8F000D8941A /* Resources */,
+				CD8622964A9255C301E59619 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MessagesExtension;
+			productName = MessagesExtension;
+			productReference = A5C4185E1E66F8F000D8941A /* MessagesExtension.appex */;
+			productType = "com.apple.product-type.app-extension.messages";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A5C4184E1E66F8F000D8941A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Sergey Biloshkurskyi";
+				TargetAttributes = {
+					A5C418531E66F8F000D8941A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 23936DN4D7;
+						ProvisioningStyle = Automatic;
+					};
+					A5C4185D1E66F8F000D8941A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 23936DN4D7;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A5C418511E66F8F000D8941A /* Build configuration list for PBXProject "AudioMessages" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A5C4184D1E66F8F000D8941A;
+			productRefGroup = A5C418551E66F8F000D8941A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5C418531E66F8F000D8941A /* AudioMessages */,
+				A5C4185D1E66F8F000D8941A /* MessagesExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A5C418521E66F8F000D8941A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5C418791E671FAC00D8941A /* wrong.m4a in Resources */,
+				A5C4187C1E6739F500D8941A /* Best_of_5.mp4 in Resources */,
+				A5C418581E66F8F000D8941A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5C4185C1E66F8F000D8941A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5C4186C1E66F8F000D8941A /* Assets.xcassets in Resources */,
+				A5C4187A1E671FAC00D8941A /* wrong.m4a in Resources */,
+				A5C4187D1E6739F500D8941A /* Best_of_5.mp4 in Resources */,
+				A5C4186A1E66F8F000D8941A /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26E04D9AE7A03C4986CD7DFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		664682C927F28A82CD6AA1AD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AudioMessages/Pods-AudioMessages-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92713CD5381B330984DE9ACF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9FE8E02B9646E3D29B4FD326 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AudioMessages/Pods-AudioMessages-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD8622964A9255C301E59619 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MessagesExtension/Pods-MessagesExtension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5C4185A1E66F8F000D8941A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5C418671E66F8F000D8941A /* MessagesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5C418611E66F8F000D8941A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5C4185D1E66F8F000D8941A /* MessagesExtension */;
+			targetProxy = A5C418601E66F8F000D8941A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A5C418681E66F8F000D8941A /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5C418691E66F8F000D8941A /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A5C4186E1E66F8F000D8941A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A5C4186F1E66F8F000D8941A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A5C418711E66F8F000D8941A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 554862045602BC66522F7165 /* Pods-MessagesExtension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				DEVELOPMENT_TEAM = 23936DN4D7;
+				INFOPLIST_FILE = MessagesExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.biloshkurskyiss.AudioMessages.MessagesExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A5C418721E66F8F000D8941A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61DA9B558E7A49D87110E7C6 /* Pods-MessagesExtension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				DEVELOPMENT_TEAM = 23936DN4D7;
+				INFOPLIST_FILE = MessagesExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.biloshkurskyiss.AudioMessages.MessagesExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		A5C418751E66F8F000D8941A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98CD425DB4541327CD9C915C /* Pods-AudioMessages.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 23936DN4D7;
+				INFOPLIST_FILE = AudioMessages/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.biloshkurskyiss.AudioMessages;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A5C418761E66F8F000D8941A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 010C5CCA2F79FAB43951C150 /* Pods-AudioMessages.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 23936DN4D7;
+				INFOPLIST_FILE = AudioMessages/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.biloshkurskyiss.AudioMessages;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A5C418511E66F8F000D8941A /* Build configuration list for PBXProject "AudioMessages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5C4186E1E66F8F000D8941A /* Debug */,
+				A5C4186F1E66F8F000D8941A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5C418701E66F8F000D8941A /* Build configuration list for PBXNativeTarget "MessagesExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5C418711E66F8F000D8941A /* Debug */,
+				A5C418721E66F8F000D8941A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5C418741E66F8F000D8941A /* Build configuration list for PBXNativeTarget "AudioMessages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5C418751E66F8F000D8941A /* Debug */,
+				A5C418761E66F8F000D8941A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A5C4184E1E66F8F000D8941A /* Project object */;
+}

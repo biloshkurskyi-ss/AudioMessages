@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Messages View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" customClass="MessagesViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qkL-Od-lgU"/>
+                        <viewControllerLayoutGuide type="bottom" id="n38-gi-rB5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pbu-lT-3sj">
+                                <rect key="frame" x="0.0" y="0.0" width="134" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHh-p5-hHy">
+                                <rect key="frame" x="80" y="28" width="160" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="wzq-2e-I0h"/>
+                                    <constraint firstAttribute="height" constant="50" id="yUE-dm-5lT"/>
+                                </constraints>
+                                <state key="normal" title="Send attached image"/>
+                                <connections>
+                                    <action selector="sendAttachedImage:" destination="ObA-dk-sSI" eventType="touchUpInside" id="gm8-WL-n5u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkw-CG-JTS">
+                                <rect key="frame" x="61" y="77" width="198" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="198" id="1Fy-wN-adF"/>
+                                    <constraint firstAttribute="height" constant="30" id="COk-fk-vK2"/>
+                                </constraints>
+                                <state key="normal" title="Send image in MSMessage"/>
+                                <connections>
+                                    <action selector="sendImageInMessage:" destination="ObA-dk-sSI" eventType="touchUpInside" id="IL8-IV-172"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNX-dl-BTa">
+                                <rect key="frame" x="61" y="115" width="198" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1c7-cj-o8I"/>
+                                    <constraint firstAttribute="width" constant="198" id="9e9-Mm-TVq"/>
+                                </constraints>
+                                <state key="normal" title="Send audio"/>
+                                <connections>
+                                    <action selector="sendAudioInMessage:" destination="ObA-dk-sSI" eventType="touchUpInside" id="HtL-qE-yUK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMq-1c-2su">
+                                <rect key="frame" x="61" y="153" width="198" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="198" id="GQn-2U-vHW"/>
+                                    <constraint firstAttribute="height" constant="30" id="S2S-uQ-Fkp"/>
+                                </constraints>
+                                <state key="normal" title="Send audio #2"/>
+                                <connections>
+                                    <action selector="sendAudioV2:" destination="ObA-dk-sSI" eventType="touchUpInside" id="mpc-L3-Awp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jN4-pY-dka">
+                                <rect key="frame" x="61" y="191" width="198" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="198" id="XF5-U6-3cD"/>
+                                    <constraint firstAttribute="height" constant="30" id="sfL-aj-Dj7"/>
+                                </constraints>
+                                <state key="normal" title="Send video"/>
+                                <connections>
+                                    <action selector="sendVideo:" destination="ObA-dk-sSI" eventType="touchUpInside" id="8xZ-4o-5Ub"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EsK-BC-Z9F">
+                                <rect key="frame" x="61" y="229" width="198" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="198" id="hly-cY-P2B"/>
+                                    <constraint firstAttribute="height" constant="30" id="yh6-Vl-o5K"/>
+                                </constraints>
+                                <state key="normal" title="Send Img &amp; Audio"/>
+                                <connections>
+                                    <action selector="sendImageWithAudio:" destination="ObA-dk-sSI" eventType="touchUpInside" id="aAZ-BL-pPf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KHh-p5-hHy" firstAttribute="top" secondItem="qkL-Od-lgU" secondAttribute="bottom" constant="8" id="0WT-Ud-fSS"/>
+                            <constraint firstItem="KHh-p5-hHy" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="AQi-HU-kaf"/>
+                            <constraint firstItem="gkw-CG-JTS" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="K75-tt-YoM"/>
+                            <constraint firstItem="jN4-pY-dka" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="NEp-kr-kMN"/>
+                            <constraint firstItem="jN4-pY-dka" firstAttribute="top" secondItem="PMq-1c-2su" secondAttribute="bottom" constant="8" id="cI7-fd-uiQ"/>
+                            <constraint firstItem="EsK-BC-Z9F" firstAttribute="top" secondItem="jN4-pY-dka" secondAttribute="bottom" constant="8" id="dCx-qJ-9Xc"/>
+                            <constraint firstItem="gkw-CG-JTS" firstAttribute="top" secondItem="qkL-Od-lgU" secondAttribute="bottom" constant="57" id="g7K-UP-fqO"/>
+                            <constraint firstItem="PMq-1c-2su" firstAttribute="top" secondItem="eNX-dl-BTa" secondAttribute="bottom" constant="8" id="kNO-cy-X8l"/>
+                            <constraint firstItem="PMq-1c-2su" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="uKD-5P-GqE"/>
+                            <constraint firstItem="eNX-dl-BTa" firstAttribute="top" secondItem="gkw-CG-JTS" secondAttribute="bottom" constant="8" id="xpk-02-Ork"/>
+                            <constraint firstItem="eNX-dl-BTa" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="yCA-he-yU1"/>
+                            <constraint firstItem="EsK-BC-Z9F" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="ygr-YK-UWj"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="528"/>
+                    <connections>
+                        <outlet property="imageViewTest" destination="Pbu-lT-3sj" id="Roy-7p-bCJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116.8" y="123.23838080959521"/>
+        </scene>
+    </scenes>
+</document>

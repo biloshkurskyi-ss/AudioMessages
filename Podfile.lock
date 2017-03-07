@@ -1,0 +1,19 @@
+PODS:
+  - Alamofire (4.3.0)
+  - AlamofireImage (3.2.0):
+    - Alamofire (~> 4.1)
+  - AudioKit (3.5.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage (~> 3.1)
+  - AudioKit (~> 3.5)
+
+SPEC CHECKSUMS:
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
+  AudioKit: 7d3183b3f95b73c747348006d4085ac6207f71fc
+
+PODFILE CHECKSUM: ed62dcadd2dcc1a0f5f18fa6897dde5cea5734bb
+
+COCOAPODS: 1.2.0
