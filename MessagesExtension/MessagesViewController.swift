@@ -17,7 +17,6 @@ class MessagesViewController: MSMessagesAppViewController {
     @IBOutlet var imageViewTest: UIImageView!
     var player: AVAudioPlayer? = nil
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -35,7 +34,6 @@ class MessagesViewController: MSMessagesAppViewController {
         // This will happen when the extension is about to present UI.
         
         // Use this method to configure the extension and restore previously stored state.
-        
         if let messageURL = conversation.selectedMessage?.url {
             if let audioUrl = decodeURL(messageURL) {
                 downloadAndPlay(audioUrl)
@@ -58,8 +56,6 @@ class MessagesViewController: MSMessagesAppViewController {
         // extension on a remote device.
         
         // Use this method to trigger UI updates in response to the message.
-        
-        print("didReceive \(message)")
     }
     
     override func didStartSending(_ message: MSMessage, conversation: MSConversation) {
@@ -85,16 +81,15 @@ class MessagesViewController: MSMessagesAppViewController {
     }
     
     override func didSelect(_ message: MSMessage, conversation: MSConversation) {
-        print("didSelect = \(message)")
     }
     
+    // MARK: - Actions
     
     @IBAction func sendAttachedImage(_ sender: UIButton) {
-
-        let stringUrl = NSTemporaryDirectory() + "image-0.jpeg"
+        let stringUrl = NSTemporaryDirectory() + imageName
         let imageUrl = URL(fileURLWithPath: stringUrl)
         
-        let image = UIImage(named: "image-0.jpeg")
+        let image = UIImage(named: imageName)
         
         let dataImage = UIImageJPEGRepresentation(image!, 0.0)
         
@@ -106,7 +101,6 @@ class MessagesViewController: MSMessagesAppViewController {
         
         //sending message
         let conversation = self.activeConversation
-        
         conversation?.insertAttachment(imageUrl, withAlternateFilename: nil, completionHandler: { (error) in
             if let error = error {
                 print(error)
@@ -116,20 +110,20 @@ class MessagesViewController: MSMessagesAppViewController {
         self.dismiss()
     }
     
+    let imageName = "image-0.jpeg"
+    let imageTitle = "Image title"
     @IBAction func sendImageInMessage(_ sender: UIButton) {
         //create messga
         let messge = MSMessage()
         let layout = MSMessageTemplateLayout()
         
-        layout.caption = "caption text"
-        
-        layout.image = UIImage(named: "image-0.jpeg")
-        layout.imageTitle = "Image title"
+        layout.caption = "Caption text"
+        layout.image = UIImage(named: imageName)
+        layout.imageTitle = imageTitle
     
         messge.layout = layout
         
         let conversation = self.activeConversation
-        
         conversation?.insert(messge, completionHandler: { (error) in
             if let error = error {
                 print(error)
@@ -139,19 +133,20 @@ class MessagesViewController: MSMessagesAppViewController {
         self.dismiss()
     }
     
+    let sendAudioCaption = "Send audio in message caption"
+    let sampleAudio = "SampleAudio_0_7mb"
+    let audioType = "m4a"
     @IBAction func sendAudioInMessage(_ sender: UIButton) {
         //create messga
         let messge = MSMessage()
         let layout = MSMessageTemplateLayout()
         
-        layout.caption = "sendAudioInMessage caption text"
-        
-        if let bundleFromPath = Bundle.main.path(forResource: "wrong", ofType: "m4a", inDirectory: nil) {
+        layout.caption = sendAudioCaption
+        if let bundleFromPath = Bundle.main.path(forResource: sampleAudio, ofType: audioType, inDirectory: nil) {
             layout.mediaFileURL = URL(fileURLWithPath: bundleFromPath)
         }
         
         messge.layout = layout
-        
         let conversation = self.activeConversation
         
         conversation?.insert(messge, completionHandler: { (error) in
@@ -164,12 +159,11 @@ class MessagesViewController: MSMessagesAppViewController {
     }
     
     @IBAction func sendAudioV2(_ sender: UIButton) {
-        let bundleFromPath = Bundle.main.path(forResource: "wrong", ofType: "m4a", inDirectory: nil)
+        let bundleFromPath = Bundle.main.path(forResource: sampleAudio, ofType: audioType, inDirectory: nil)
         let insertedUrl = URL(fileURLWithPath: bundleFromPath!)
         
         //sending message
         let conversation = self.activeConversation
-        
         conversation?.insertAttachment(insertedUrl, withAlternateFilename: nil, completionHandler: { (error) in
             if let error = error {
                 print(error)
@@ -179,14 +173,16 @@ class MessagesViewController: MSMessagesAppViewController {
         self.dismiss()
     }
     
+    let videoCaptionText = "Video caption text"
+    let sampleVideo = "SampleVideo_1280x720_5mb"
+    let videoType = "mp4"
     @IBAction func sendVideo(_ sender: UIButton) {
         //create messga
         let messge = MSMessage()
         let layout = MSMessageTemplateLayout()
         
-        layout.caption = "Video caption text"
-        
-        if let bundleFromPath = Bundle.main.path(forResource: "Best_of_5", ofType: "mp4", inDirectory: nil) {
+        layout.caption = videoCaptionText
+        if let bundleFromPath = Bundle.main.path(forResource: sampleVideo, ofType: videoType, inDirectory: nil) {
             layout.mediaFileURL = URL(fileURLWithPath: bundleFromPath)
         }
         
@@ -203,31 +199,24 @@ class MessagesViewController: MSMessagesAppViewController {
         self.dismiss()
     }
     
+    let gifFileUrl = "https://upload.wikimedia.org/wikipedia/ru/7/79/GIF_-_bubble_animation.gif"
     @IBAction func sendImageWithAudio(_ sender: UIButton) {
         //create messga
         let messge = MSMessage()
         let layout = MSMessageTemplateLayout()
         
-        Alamofire.request("http://kolobuga.ru/wp-content/uploads/2016/11/url.png").responseImage { (response) in
-            debugPrint(response)
- 
-            debugPrint(response.result)
-            
+        Alamofire.request(gifFileUrl).responseImage { (response) in
             if let image = response.result.value {
-                
                 self.imageViewTest.image = image
-                print("image downloaded: \(image)")
-                
-                layout.caption = "Downloaded image caption"
+
+                layout.caption = "Caption text"
+                layout.subcaption = "Subcaption text"
                 layout.image = image
                 
-                
                 messge.url = self.prepareURL()
-                
                 messge.layout = layout
                 
                 let conversation = self.activeConversation
-                
                 conversation?.insert(messge, completionHandler: { (error) in
                     if let error = error {
                         print(error)
@@ -239,15 +228,15 @@ class MessagesViewController: MSMessagesAppViewController {
         }
     }
     
+    // MARK: - Private Methods
+    
+    let queryKey = "audioFile"
+    let mp3Url = "http://www.sample-videos.com/audio/mp3/wave.mp3"
     func prepareURL() -> URL {
         var urlComponents = URLComponents()
-        urlComponents.scheme = "https";
-        urlComponents.host = "www.doowapp.com";
-        let playerQuery = URLQueryItem(name: "audioFile",
-                                       value: "http://freetone.org/ring/stan/iPhone_5-Alarm.mp3")
-        
+        let playerQuery = URLQueryItem(name: queryKey,
+                                       value: mp3Url)
         urlComponents.queryItems = [playerQuery]
-        
         return urlComponents.url!
     }
     
@@ -256,9 +245,8 @@ class MessagesViewController: MSMessagesAppViewController {
                                        resolvingAgainstBaseURL: false)
         
         for (_, queryItem) in (components?.queryItems?.enumerated())! {
-            if queryItem.name == "audioFile" {
+            if queryItem.name == queryKey {
                 let fileUrl = queryItem.value
-                print("fileUrl = \(fileUrl)")
                 return fileUrl
             }
         }
